@@ -26,7 +26,9 @@ export default function Home() {
       const remaining_date_and_time = countDownDate - currentDate;
 
       // Calculating days, hours, minutes, and seconds from the remaining time
-      const count_down_days = Math.floor(remaining_date_and_time / (1000 * 60 * 60 * 24));
+      const count_down_days = Math.floor(
+        remaining_date_and_time / (1000 * 60 * 60 * 24)
+      );
       const count_down_hours = Math.floor(
         (remaining_date_and_time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
@@ -55,6 +57,7 @@ export default function Home() {
   useEffect(() => {
     startTimer();
     return () => {
+      // This code cleans up the timer when the component is about to unmount.
       clearInterval(interval.current);
     };
   }, []);
