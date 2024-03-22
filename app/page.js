@@ -15,7 +15,7 @@ export default function Home() {
 
   // Starting or calling the timer
   const startTimer = () => {
-    const countDownDate = new Date("December, 01, 2023 00:00:00").getTime();
+    const countDownDate = new Date("December, 01, 2024 00:00:00").getTime();
 
     // Setting up an interval to update the countdown every second
     interval = setInterval(() => {
